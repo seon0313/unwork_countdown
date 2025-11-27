@@ -1,7 +1,7 @@
 # GoHome Timer 🏠
 
-- [English](https://github.com/seon0313/unwork_countdown/blob/main/README.md)
-- [한국어](https://github.com/seon0313/unwork_countdown/blob/main/README_KOR.md)
+- [🇺🇸 English](https://github.com/seon0313/unwork_countdown/blob/main/README.md)
+- [🇰🇷 한국어](https://github.com/seon0313/unwork_countdown/blob/main/README_KOR.md)
 
 6시 정시 퇴근을 위한 미니멀 데스크톱 카운트다운 위젯입니다.
 작업에 방해되지 않으면서도 목표 시간까지 남은 시간을 직관적으로 보여줍니다.
