@@ -17,10 +17,10 @@
 -   **퇴근 카운트다운**: 18:00 (오후 6시)를 기준으로 실시간 카운트다운을 표시합니다.
 -   **고정 위치**: 화면 우측 하단(작업표시줄 바로 위)에 항상 위치하여 시선을 분산시키지 않습니다.
 
-![smart_evasion](https://github.com/seon0313/unwork_countdown/blob/image/main/img2.png)
+![smart_evasion](https://github.com/seon0313/unwork_countdown/blob/main/image/img2.png)
 -   **스마트 회피 (Dodge Mode)**: 위젯 뒤에 있는 버튼을 눌러야 하나요? 마우스를 올리기만 하면 위젯이 알아서 오른쪽으로 비켜나 UI를 가리지 않습니다.
 
-![gesture_exit](https://github.com/seon0313/unwork_countdown/blob/image/main/img3.png)
+![gesture_exit](https://github.com/seon0313/unwork_countdown/blob/main/image/img3.png)
 -   **제스처 종료**: 프로그램을 끄고 싶을 땐, 마우스 포인터를 화면 **왼쪽 맨 위 모서리**로 가져가 **2초간 유지**하세요. 별도의 종료 버튼 없이 직관적인 제스처로 깔끔하게 종료됩니다.
 
 ## 🚀 시작하기
