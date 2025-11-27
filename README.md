@@ -1,4 +1,4 @@
-# GoHome Timer 🏠
+# unwork Countdown 🏠
 
 - [🇺🇸 English](https://github.com/seon0313/unwork_countdown/blob/main/README.md)
 - [🇰🇷 한국어](https://github.com/seon0313/unwork_countdown/blob/main/README_KOR.md)
@@ -8,7 +8,7 @@ A minimalist desktop countdown widget designed for the 6 PM finish line. It stay
 
 ## 📝 Overview
 
-**GoHome Timer** is a lightweight desktop widget that counts down the time remaining until 18:00 (6:00 PM). It is designed to be unobtrusive yet accessible, featuring smart positioning and gesture-based controls to ensure it never hinders your workflow.
+**unwork Countdown** is a lightweight desktop widget that counts down the time remaining until 18:00 (6:00 PM). It is designed to be unobtrusive yet accessible, featuring smart positioning and gesture-based controls to ensure it never hinders your workflow.
 
 ## ✨ Key Features
 
