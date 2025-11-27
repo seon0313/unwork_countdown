@@ -8,7 +8,7 @@ A minimalist desktop countdown widget designed for the 6 PM finish line. It stay
 
 ## 📝 Overview
 
-![preview](https://github.com/seon0313/unwork_countdown/blob/main/img1)
+![preview](https://github.com/seon0313/unwork_countdown/blob/main/image/img1)
 
 **unwork Countdown** is a lightweight desktop widget that counts down the time remaining until 18:00 (6:00 PM). It is designed to be unobtrusive yet accessible, featuring smart positioning and gesture-based controls to ensure it never hinders your workflow.
 
@@ -17,10 +17,10 @@ A minimalist desktop countdown widget designed for the 6 PM finish line. It stay
 -   **Target Time Countdown**: Displays a live countdown timer targeting 18:00 (6 PM).
 -   **Fixed Positioning**: Anchored firmly at the bottom-right corner of your screen, sitting neatly just above the taskbar.
 
-![smart_evasion](https://github.com/seon0313/unwork_countdown/blob/main/img2)
+![smart_evasion](https://github.com/seon0313/unwork_countdown/blob/main/image/img2)
 -   **Smart Evasion (Dodge Mode)**: Need to click something behind the timer? Just hover your mouse over it. The widget automatically moves to the right to reveal any underlying UI elements.
 
-![gesture_exit](https://github.com/seon0313/unwork_countdown/blob/main/img3)
+![gesture_exit](https://github.com/seon0313/unwork_countdown/blob/main/image/img3)
 -   **Gesture Exit**: To close the program, simply move your mouse cursor to the **top-left corner** of the screen and hold it there for **2 seconds**. The app will countdown and terminate automatically.
 
 ## 🚀 Getting Started
