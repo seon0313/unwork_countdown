@@ -1,7 +1,7 @@
 # GoHome Timer 🏠
 
-- [English](https://github.com/seon0313/unwork_countdown/blob/main/README.md)
-- [한국어](https://github.com/seon0313/unwork_countdown/blob/main/README_KOR.md)
+- [🇺🇸 English](https://github.com/seon0313/unwork_countdown/blob/main/README.md)
+- [🇰🇷 한국어](https://github.com/seon0313/unwork_countdown/blob/main/README_KOR.md)
 
 
 A minimalist desktop countdown widget designed for the 6 PM finish line. It stays out of your way but keeps the goal in sight.
