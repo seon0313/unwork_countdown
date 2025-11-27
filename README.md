@@ -1,4 +1,4 @@
-# unwork Countdown 🏠
+# unwork Countdown
 
 - [🇺🇸 English](https://github.com/seon0313/unwork_countdown/blob/main/README.md)
 - [🇰🇷 한국어](https://github.com/seon0313/unwork_countdown/blob/main/README_KOR.md)
