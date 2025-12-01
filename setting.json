@@ -1,0 +1,6 @@
+{
+    "target-time": "18:00",
+    "background-color": {"r": 34, "g": 34, "b": 34},
+    "font-color": "#fff",
+    "shutdown-timer": 2.0
+}

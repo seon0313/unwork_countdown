@@ -1,7 +1,26 @@
 from datetime import datetime
 import time
 import sys
+import os
 from tkinter import *
+from pathlib import Path
+import json
+
+BASE_DIR = Path(__file__).resolve().parent
+
+setting_path = BASE_DIR / 'setting.json'
+if setting_path.exists():
+	setting = json.loads(setting_path.read_text(encoding='utf-8'))
+else:
+	setting = None
+
+current_mtime = setting_path.stat().st_mtime
+
+target_time = setting.get('target-time', '18:00').split(':')
+bg_color = setting.get('background-color', {'r': 34, 'g': 34, 'b': 34})
+bg_color_hex = f"#{bg_color['r']:02x}{bg_color['g']:02x}{bg_color['b']:02x}"
+font_color = setting.get('font-color', '#ffffff')
+shutdown_timer = setting.get('shutdown-timer', 2.0)
 
 root = Tk()
 root.overrideredirect(True)
@@ -37,7 +56,7 @@ else:
 
 root.geometry(f"{150}x{50}+{x}+{y}")
 
-label = Label(root, text='ㅁ', font=(None, 18), bg='#222', fg='#fff')
+label = Label(root, text='ㅁ', font=(None, 18), bg=bg_color_hex, fg=font_color)
 label.place(relwidth=1, relheight=1)
 
 last_pointer = {'rel': (None, None), 'abs': (None, None), 'over': False, 'ts': None}
@@ -83,23 +102,23 @@ def timeSet():
 	root.geometry(f"{150}x{50}+{max(ax+15, x) if ay >= y and ay < y+50 else x}+{y}")
 	
 	_y,m,d = time.strftime('%Y-%m-%d').split('-')
-	target_date = datetime(int(_y), int(m), int(d), 18, 0, 0)
+	target_date = datetime(int(_y), int(m), int(d), int(target_time[0]), int(target_time[1]), 0)
 	label.config(text=f'{target_date-datetime.now()}'.split('.')[0])
 
-	base_rgb = (34, 34, 34)
+	base_rgb = tuple(bg_color.values())
 	red_rgb = (255, 0, 0)
 
 	
 	if not ax and not ay:
 		if endtime == 0:
 			endtime = time.time()
-		elif time.time()-endtime >= 2:
+		elif time.time()-endtime >= shutdown_timer:
 			root.destroy()
 		else:
 			elapsed = time.time() - endtime
 			label.config(text="%.1f" % (elapsed))
-			clamped = max(0.0, min(elapsed, 2.0))
-			t = clamped / 2.0
+			clamped = max(0.0, min(elapsed, shutdown_timer))
+			t = clamped / shutdown_timer
 			r = int(base_rgb[0] + (red_rgb[0] - base_rgb[0]) * t)
 			g = int(base_rgb[1] + (red_rgb[1] - base_rgb[1]) * t)
 			b = int(base_rgb[2] + (red_rgb[2] - base_rgb[2]) * t)
@@ -119,6 +138,12 @@ def timeSet():
 			pass
 			
 	root.after(50, timeSet)
+
+def checkSettingJsonLoop():
+	if current_mtime != setting_path.stat().st_mtime:
+		os.execl(sys.executable, sys.executable, *sys.argv)
+	root.after(1000, checkSettingJsonLoop)
+
 
 root.bind('<Escape>', lambda e: root.destroy())
 
@@ -143,5 +168,6 @@ try:
 except Exception:
 	enabled = False
 root.after(1, timeSet)
+root.after(1, checkSettingJsonLoop)
 root.mainloop()
 root.quit()
