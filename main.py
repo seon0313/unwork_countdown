@@ -51,8 +51,22 @@ if sys.platform == 'win32':
 else:
 	screen_w = root.winfo_screenwidth()
 	screen_h = root.winfo_screenheight()
-	x = screen_w - 150
-	y = screen_h - 50
+	if sys.platform == 'darwin':
+		# On macOS, try to use AppKit to get the visible frame (excludes Dock/menu bar).
+		# Fallback to a configurable default dock height if AppKit isn't available.
+		try:
+			from AppKit import NSScreen
+			visible = NSScreen.mainScreen().visibleFrame()
+			visible_h = int(visible.size.height)
+			x = screen_w - 150
+			y = visible_h - 50
+		except Exception:
+			dock_height = setting.get('mac-dock-height', 50)
+			x = screen_w - 150
+			y = screen_h - 50 - int(dock_height)
+	else:
+		x = screen_w - 150
+		y = screen_h - 50
 
 root.geometry(f"{150}x{50}+{x}+{y}")
 
